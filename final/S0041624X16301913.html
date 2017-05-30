@@ -1,0 +1,1018 @@
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" Title="Default Styles" href="//sdfestaticassets-us-east-1.sciencedirectassets.com/prod/7032e05c5c0b6ab4860e163c162d4d4c7c8842c5/style.css" type="text/css">
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="robots" content="NOARCHIVE">
+<meta name="robots" content="noodp" />
+<meta name="robots" content="noydir" />
+
+<link rel="canonical" href="http://www.sciencedirect.com.proxy.kennesaw.edu/science/article/pii/S0041624X16301913">
+
+
+<link rel="shortcut icon" href="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/favSD.ico" type="image/x-icon">
+<title>
+ A pre-trained convolutional neural network based method for thyroid nodule diagnosis
+ </title> 
+
+<link type="text/css" rel="StyleSheet" href="http://www.sciencedirect.com.proxy.kennesaw.edu/gadgetservices/gadgets/v9/css/gadgets_ext,gadgets,toolbar,SDArticleGadgetOverRide,jquery-ui-1.8.4.custom.css">
+
+
+<link rel="stylesheet" href="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/css/article_1704R5.css" type="text/css">
+<link rel="stylesheet" href="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/css/articleSprite_1704R5.css" type="text/css">
+<link rel="stylesheet" href="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/css/jquery-ui_1704R5.css" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" Title="Default Styles" href="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/css/css_gen_ielt9_1704R5.css" type="text/css">
+<![endif]-->
+
+<script>
+var ab=new Object();
+ab.entitled = true;
+</script>
+<script>(function() {var scriptTag = document.createElement('script'); 
+scriptTag.type = 'text/javascript';scriptTag.async = true;
+scriptTag.src = '//cdn.optimizely.com/js/204774041.js';
+var head = document.getElementsByTagName('head')[0];
+head.parentNode.insertBefore(scriptTag, head);
+})();function optimizelyTimeout() {
+window.optimizely = window.optimizely|| []; 
+if(!window.optimizely.data) {
+window.optimizely.push("timeout"); } }
+setTimeout(optimizelyTimeout, 1000); </script>
+
+<!-- Start: GPT Async -->
+<script type='text/javascript'>
+	
+var gptadslots=[];
+	
+var googletag = googletag || {};
+	
+googletag.cmd = googletag.cmd || [];
+	
+(function(){ var gads = document.createElement('script');
+		
+gads.async = true; gads.type = 'text/javascript';
+		
+var useSSL = 'https:' == document.location.protocol;
+		
+gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		
+var node = document.getElementsByTagName('script')[0];
+		
+node.parentNode.insertBefore(gads, node);
+	})();
+
+</script>
+
+<script>
+var prs = new Object();prs.rt=function(label,ts){this[label]=(ts||ts==0?ts:new Date().getTime());};
+</script>
+
+
+
+<!--[if lte IE 7]>
+<script src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/ut/js/json2_1704R5.js.min"></script>
+<![endif]-->
+</head>
+
+
+<script>
+(function() {
+  if (window.BOOMR && window.BOOMR.version) { return; }
+  var dom,doc,where,iframe = document.createElement('iframe'),win = window;
+
+  function boomerangSaveLoadTime(e) {
+    win.BOOMR_onload=(e && e.timeStamp) || new Date().getTime();
+  }
+  if (win.addEventListener) {
+    win.addEventListener("load", boomerangSaveLoadTime, false);
+  } else if (win.attachEvent) {
+    win.attachEvent("onload", boomerangSaveLoadTime);
+  }
+
+  iframe.src = "javascript:false";
+  iframe.title = ""; iframe.role="presentation";
+  (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+  where = document.getElementsByTagName('script')[0];
+  where.parentNode.insertBefore(iframe, where);
+
+  try {
+    doc = iframe.contentWindow.document;
+  } catch(e) {
+    dom = document.domain;
+    iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
+    doc = iframe.contentWindow.document;
+  }
+  doc.open()._l = function() {
+    var js = this.createElement("script");
+    if(dom) this.domain = dom;
+    js.id = "boomr-if-as";
+    js.src = '//c.go-mpulse.net/boomerang/' +
+    '2FBN2-NKMGU-EJKY8-ZANKZ-SUJZF';
+    BOOMR_lstart=new Date().getTime();
+    this.body.appendChild(js);
+  };
+  doc.write('<body onload="document._l();">');
+  doc.close();
+})();
+</script>
+
+
+
+
+<body>
+
+<div class="ua_btn" role="region" aria-label="screen reader compatability"><a role="button" rel="nofollow" href="http://www.sciencedirect.com.proxy.kennesaw.edu/science/article/pii/S0041624X16301913?np=y">Screen reader users, click here to load entire article</a>This page uses JavaScript to progressively load the article content as a user scrolls.  Screen reader users, click the load entire article button to bypass dynamically loaded article content.</div>
+
+
+
+<script>
+var refLinkURL = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/relLink/ajaxReq?_eid=1-s2.0-S0041624X16301913";
+var updatedCitedBy = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/referenceResolution/ajaxRefResol?_updateCitedBy=";
+var refResolvePath = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/referenceResolution/ajaxRefResol?_pii=S0041624X16301913&_refCnt=50&_docType=article";
+
+// these variables handle the reference resolution. Please ignore the naming.
+// the first variable myMap will hold an associative array of links by bibID
+// the second variable myXabsCounts holds the scopus counts.
+var myMap = []; // html of links for references.
+var myXabsCounts = []; // scopus counts
+</script>
+<div id="header-area">
+  
+
+
+<!-- ************* For A/B testing FAST and SOLR Proxy ***************** -->
+
+<!-- *************End for A/B testing FAST and SOLR Proxy *****************-->
+
+
+
+<div id="ieWarningMsg">
+    <span class="infoIcon_ie spErrorIcon">
+        Please note that Internet Explorer version 8.x will not be supported as of January 1, 2016. Please refer to <a href="http://blog.sciencedirect.com.proxy.kennesaw.edu/posts/have-you-heard-spread-the-word-about-upgrading-your-browser"> this blog post</a> for more information.
+    </span>
+    <a class="closeBt" title="Close Internet Explorer 7 warning">Close</a>
+</div>
+
+
+
+<div id="header">
+
+<div class="ccs-component">
+    <div class="header" role="banner"><div class="els-header"><div class="LibraryBanner" id="library-banner"><div class="customer-banner-container"><div class="customer-banner"><span>Brought to you by:</span><a target="_blank" href="http://library.kennesaw.edu.proxy.kennesaw.edu" rel="nofollow"><span id="libraryBannerText">Kennesaw State University Library System</span></a></div></div><div class="els-header-library-close"><a class="ccs-icon svg-delete link-inherit" id="ccs-closeLibraryBanner" aria-label="Close library banner" aria-controls="library-banner" role="button" title="Close"></a></div></div><div class="els-header-sub-nav-container"><div class="els-header-leftside"><div class="els-header-wordmark"><a href="/"><span aria-label="ScienceDirect" class="ccs-icon svg-wordmark-sciencedirect-orange els-main-title"><span class="svg-text">ScienceDirect</span></span></a></div></div><div class="els-header-sub-nav"><ul class="JournalsAndBooks els-header-navigation" role="navigation"><li class="els-header-navigation-section"><a id="ccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/journals">Journals</a></li><li class="els-header-navigation-section"><a id="ccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/bookbshsrw">Books</a></li><li class="els-header-navigation-section"><a class="link-inherit els-header-navigation-item " href="https://www-sciencedirect-com.proxy.kennesaw.edu/user/register?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0041624X16301913">Register</a></li></ul><ul class="els-header-icons"><li class="els-header-icons-item els-header-user"><a aria-controls="ccs-profilePopup" aria-expanded="false" id="ccs-profilePopupLink" title="" href="https://www-sciencedirect-com.proxy.kennesaw.edu/user/login?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0041624X16301913" class="link-inherit els-header-user-link"><span class="signIn_User"><span id="els-header-user-sign-in" class="els-header-user-sign-in">Sign in</span><span id="els-header-user-sign-in-icon" class="ccs-icon svg-sdfe-arrow-down els-header-user-icon-signin"></span></span></a><div class="SignInOut"><div class="ccs-signin-popup" role="dialog" id="ccs-profilePopup" aria-label="Sign in"><div class="ccs-signin-popup-body-border"><div class="ccs-signin-body ccs-signin-popup-body"><form id="ccs-header-sign-in-form" class="SignInForm ccs-signin-local" action="https://www-sciencedirect-com.proxy.kennesaw.edu/science/MiamiLoginURL" method="POST"><input type="hidden" value="login" name="login"/><input type="hidden" value="MiamiLogonURL" name="_ob"/><input type="hidden" value="http://www.sciencedirect.com/science/article/pii/S0041624X16301913" name="returnURL"/><input type="hidden" value="http://www.sciencedirect.com/science/article/pii/S0041624X16301913" name="targetURL"/><input type="hidden" value="https://www-sciencedirect-com.proxy.kennesaw.edu/science/MiamiLoginURL" name="invalidLoginURL"/><input type="hidden" value="article" name="pageType"/><div><h3>Sign in using your ScienceDirect credentials</h3><div class="ccs-signin-form"><div><label class="ccs-signin-form-left">Username</label><span class="ccs-signin-form-right"><input class="ccs-signin-username" name="userid" id="ccs-signin-username-input" title="Please enter your username here" type="text"/></span></div><div><label class="ccs-signin-form-left">Password</label><span class="ccs-signin-form-right"><input class="ccs-signin-password" name="password" title="Please enter your password here" type="password"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="" name="rememberid" value="Y" title="Checking this option will log you in automatically next time you visit ScienceDirect" type="checkbox" checked=""/><label>Remember me</label></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="ccs-signin-submit" value="Sign in" title="Sign in to ScienceDirect" type="submit"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><a class="link-inherit" rel="nofollow" href="/science?_ob=ReminderURL&amp;_method=display&amp;md5=4a97631c25ac81c09ad2f961106e9da2" target="passwd" title="Click here for help in recovering your ScienceDirect access">Forgotten username or password?</a></span></div></div></div></form><div class="InstitutionalLogin ccs-signin-remote"><h3>Sign in via your institution</h3><ul class="ccs-signin-institution"><li class="ccs-signin-open-athens"><a class="link-inherit" rel="nofollow" href="https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.eduserv.org.uk%2Fopenathens&amp;appReturnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0041624X16301913" title="Log in using OpenAthens">OpenAthens</a></li><li class="ccs-signin-external"><a class="link-inherit" rel="nofollow" href="/science/externallogin" title="Other institution login">Other institution</a></li></ul></div></div></div></div></div></li><li class="Help els-header-icons-item"><a id="ccs-help-link" class="link-inherit els-header-help" href="/science?_ob=HelpURL&amp;_file=browse_open_doc.htm&amp;_btn=Y" title="Help" target="_blank"><span aria-label="Help" class="ccs-icon svg-help"><span class="svg-text">Help</span></span></a></li></ul><div id="mobile-menu-parent"><div class="HamburgerButton" id="hamburger-button"><button id="ccs-mobileHamburgerButton" aria-controls="" aria-expanded="false" aria-label="Menu" class="link"><span class="svg-hamburger-closed"></span></button></div><div aria-label="Mobile menu" class="MobileMenu" id="mobile-menu"><div class="mobile-menu-container" id="mobile-menu-container"><div class="mobilemenu-content"><div><div class="primary-mobile-menu"><ul class="JournalsAndBooks els-header-navigation" role="navigation"><li class="els-header-navigation-section"><a id="mobileccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/journals">Journals</a></li><li class="els-header-navigation-section"><a id="mobileccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/bookbshsrw">Books</a></li><li class="els-header-navigation-section"><a class="link-inherit els-header-navigation-item " href="https://www-sciencedirect-com.proxy.kennesaw.edu/user/register?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0041624X16301913">Register</a></li></ul></div><div class="secondary-mobile-menu"><li class="els-header-icons-item els-header-user"><a href="https://www-sciencedirect-com.proxy.kennesaw.edu/user/login?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0041624X16301913" aria-controls="mobileccs-profilePopup" aria-expanded="false" id="mobileccs-ProfilePopupLink" class="link-inherit els-header-user-link"><span class="signIn_User"><span id="els-header-user-sign-in" class="els-header-user-sign-in">Sign in</span><span id="els-header-user-sign-in-icon" class="ccs-icon svg-sdfe-arrow-down els-header-user-icon-signin"></span></span></a></li><li class="Help els-header-icons-item"><a id="mobileccs-help-link" class="link-inherit els-header-help" href="/science?_ob=HelpURL&amp;_file=browse_open_doc.htm&amp;_btn=Y" title="Help" target="_blank"><span aria-label="Help" class="ccs-icon svg-help"><span class="svg-text">Help</span></span></a></li></div></div></div></div></div></div><div class="SignInOut"><div class="ccs-signin-popup ccs-mobile-signin-popup" role="dialog" id="mobileccs-profilePopup" aria-label="Sign in"><div class="ccs-signin-popup-body-border"><div class="ccs-signin-body ccs-signin-popup-body"><form id="ccs-header-sign-in-form" class="SignInForm ccs-signin-local" action="https://www-sciencedirect-com.proxy.kennesaw.edu/science/MiamiLoginURL" method="POST"><div class="ccs-sign-in-close"><a href="#" class="ccs-icon svg-delete link-inherit" id="ccs-closeSignInPopup" aria-label="Close sign in popup" aria-controls="mobileccs-profilePopup" role="button" title="Close"><span class="svg-text">close</span></a></div><input type="hidden" value="login" name="login"/><input type="hidden" value="MiamiLogonURL" name="_ob"/><input type="hidden" value="http://www.sciencedirect.com/science/article/pii/S0041624X16301913" name="returnURL"/><input type="hidden" value="http://www.sciencedirect.com/science/article/pii/S0041624X16301913" name="targetURL"/><input type="hidden" value="https://www-sciencedirect-com.proxy.kennesaw.edu/science/MiamiLoginURL" name="invalidLoginURL"/><input type="hidden" value="article" name="pageType"/><div><h3>Sign in using your ScienceDirect credentials</h3><div class="ccs-signin-form"><div><label class="ccs-signin-form-left">Username</label><span class="ccs-signin-form-right"><input class="ccs-signin-username" name="userid" id="mobileccs-signin-username-input" title="Please enter your username here" type="text"/></span></div><div><label class="ccs-signin-form-left">Password</label><span class="ccs-signin-form-right"><input class="ccs-signin-password" name="password" title="Please enter your password here" type="password"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="" name="rememberid" value="Y" title="Checking this option will log you in automatically next time you visit ScienceDirect" type="checkbox" checked=""/><label>Remember me</label></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="ccs-signin-submit" value="Sign in" title="Sign in to ScienceDirect" type="submit"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><a class="link-inherit" rel="nofollow" href="/science?_ob=ReminderURL&amp;_method=display&amp;md5=4a97631c25ac81c09ad2f961106e9da2" target="passwd" title="Click here for help in recovering your ScienceDirect access">Forgotten username or password?</a></span></div></div></div></form><div class="InstitutionalLogin ccs-signin-remote"><h3>Sign in via your institution</h3><ul class="ccs-signin-institution"><li class="ccs-signin-open-athens"><a class="link-inherit" rel="nofollow" href="https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.eduserv.org.uk%2Fopenathens&amp;appReturnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0041624X16301913" title="Log in using OpenAthens">OpenAthens</a></li><li class="ccs-signin-external"><a class="link-inherit" rel="nofollow" href="/science/externallogin" title="Other institution login">Other institution</a></li></ul></div></div></div></div></div></div></div></div></div> 
+    
+</div> 
+
+
+</div><!--header-->
+
+
+
+
+
+
+
+
+
+</div><!--header-area-->
+        <!-- PDFKING/PDFCITE -->
+        <div id="pdfModalWindow" class="pdfModalWindow" style="display:none;" onClick="pdfCite.closePopup();"></div>
+        <div id="suggestedPdfList" style="display:none;">
+         
+            <div id="suggestedPdfList" style="display: block;" class="newStyles">
+  <div id="modalBoxDisplay" class="nojs" tabindex="0" role="dialog" aria-labelledby="hdSDSuggestions">
+    <div class="pdfModalWindowMsgBox" id="pdfModalWindowMsgBox" >
+	  <div class = "modal" style="-webkit-box-shadow: none; box-shadow: none; margin-left: 12px; margin-right: 12px;">
+        <div id="displayPdfKing" style="display:block;">
+           <form method="get" name="Tag" action="/science/suggestedArt/export" style="padding:0px; margin:0px;" target="">
+            <input type="hidden" name="pdfDownload" value="download">
+            
+                <input type="hidden" name="PDF_DDM_MAX" value=25>
+             
+            <input type="hidden" name="_retainOrder" value="Y">
+            <input class='zone' name='zone' type='hidden' value='DDM'/>
+            <div class="header" style="height: auto; padding-bottom: 20px; background: rgb(255, 255, 255);">
+            <div class="pdfKingHeading" style="display:block;">Other users also viewed these articles
+            <a class="newCloseBtn" id="pdfKingcloseBtn" href = "#" title = "Close Article Suggestions" alt="Close Article Suggestions"><img src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/sci_dir/closeButton.png"></a></div></div>
+            <div id="SuggestedArtList" style="min-height: 100px;">
+                <div class="toolBar">
+                <ul class = "group"> 
+                    
+                    <li class="pdfDownloader" style="display: inline-block; padding: 4px 4px 0px 4px; border: 1px solid rgb(201, 201, 201);">
+                        <input value="Download All PDFs" name="pdfDownloadButton" class="listAction iconBg" type="submit" id="multiPdfIcon" aria-describedby="downloadAllPdfAx" style="width:auto; font-size: 14px; color: rgb(49, 108, 157);">
+                        <span class="arrow"></span>
+                        <span id="downloadAllPdfAx" class="hidden" >Opens document download manager</span>
+                    </li>
+                    
+                </ul>
+                </div>
+                
+                <div id="pdfkingContent" style="display:none;">
+                    <div class="popcontent"></div> 
+                    <div id="relatedArtList" data-entitled="Y"></div>
+                </div>
+                
+            </div>
+                
+                <div class="newFooter">
+                <a class = "do-not-show" href="#" onClick="pdfCite.setOptOutFlag('http://www.sciencedirect.com.proxy.kennesaw.edu/science/suggestedArt/optOut');" style="cursor: pointer; float: none; line-height: normal;">Do not show again</a>
+                </div>
+          </form>
+        </div>
+        <div id="pdfKingMessage" style="display:none;">
+          <div class="pdfKingHeading" style="display:block;">
+            <span class="downloadMsg">Downloading zip file containing 3 articles...</span>
+            <a class="newCloseBtn" onClick="pdfCite.closePopup();" href = "#" title = "Close Article Suggestions" alt="Close Article Suggestions"><img src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/sci_dir/closeButton.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        </div>
+        <!-- PDFKING/PDFCITE End -->
+<div id="page-area">
+    
+     
+     
+    <div id="articleToolbar" class="clearfix quicksearch prd_sci_dir">
+        <div id="articleNav">
+  <ul aria-label="Article options" role="navigation" class="clearfix">
+    <!-- return to gateway -->
+     
+
+
+
+
+
+
+<li>
+  <div class="icon_pdf toolbar">
+    <div class="largeIcon"></div>
+    <a id="pdfLink" rel="nofollow"   href="http://www.sciencedirect.com.proxy.kennesaw.edu/science/article/pii/S0041624X16301913/pdfft?md5=899735d6fa1f31021a0d94aafca2b02f&pid=1-s2.0-S0041624X16301913-main.pdf" queryStr="?_origin=article&_zone=toolbar" target="newPdfWin"   pdfurl="http://www.sciencedirect.com.proxy.kennesaw.edu/science/article/pii/S0041624X16301913/pdfft?md5=899735d6fa1f31021a0d94aafca2b02f&pid=1-s2.0-S0041624X16301913-main.pdf" queryStr="?_origin=article&_zone=toolbar" suggestedArtURL="http://www.sciencedirect.com.proxy.kennesaw.edu/science/suggestedArt/citeList/pii/S0041624X16301913/eid/1-s2.0-S0041624X16301913/serial" class="S_C_pdfLink big pdf ext_sdlink cLink" style="cursor:pointer" title="Download PDF" >Download PDF
+    <span id="pdfExplanation" class="offscreen">Opens in a new window.  Article suggestions will be shown in a dialog on return to ScienceDirect.</span>
+    </a>
+  </div>
+</li>
+ 
+ 
+
+
+
+
+
+
+
+<li class="exportPopupListitem">
+<div class="pulldown">
+    <div class="exportDivision" title="Export citations">
+    <div class="exportIconText">
+    <div class="icon_exportarticlesci_dir initialImage export_icon" tabindex="0"> &nbsp; </div>
+    <input id="icon_exportarticle" value="Export" name="export" class="listAction export export_general" tabindex="-1" type="button">
+     <span class="downSM_sci_dir exportArrow"></span>
+    </div>
+    <input class='zone' name='zone' type='hidden' value='exportDropDown'/>
+    </div>
+    <div class="menu export_popup hidden" id="export_popup">
+    <div  class='warningIcon' title="Warning Icon" alt="Warning Icon"></div>
+    <form name="exportCite" method=post action=/science?_ob=DownloadURL&_method=finish&_eidkey=1-s2.0-S0041624X16301913&count=1&_docType=FLA&md5=1980456178b3a13ef9ef640765be5f05 target="">
+    <input class='zone' name='zone' type='hidden' value='exportDropDown'/>
+            <script language="javascript" type="text/javascript">
+<!--
+
+function checkExportFormat(limit) {
+
+    var msg = "";
+
+    for (i=0;i<document.exportCite.elements.length;i++) {
+        if (document.exportCite.elements[i].value == "REFWX") {
+            if (document.exportCite.elements[i].checked) {
+                document.exportCite.setAttribute('target',"RefWorksMain");
+                if (checkLimit()) {
+                    if (limit) {
+                        msg = "It is possible that some users may experience problems when downloading large numbers of citations. If this happens please contact RefWorks support at your regionally hosted site or e-mail support@refworks.com to assist you further.\n\n";
+                    }
+                    msg += "Exporting to RefWorks may take some time, please wait....";
+                    alert(msg);
+                }
+            }
+            else {
+                document.exportCite.setAttribute('target',"");
+            }
+            break;
+        }
+    }
+    return true;
+}
+
+function determineCount(numStr) {
+    var count=1;
+
+    if(numStr.indexOf("-")) {
+        var rangeStr = numStr.split("-");
+
+        if(rangeStr.length == 2) {
+            var highNum = parseInt(rangeStr[1]);
+            var lowNum = parseInt(rangeStr[0]);
+
+            if(highNum >= lowNum) { count = (highNum - lowNum) + 1; }
+        }
+    }
+    return count;
+}
+
+function checkLimit(){
+
+    var selectNum = "";
+    var useSelected = false;
+    var allNum = 0;
+    var count = 0;
+    var rdoc = 0;
+
+    for (i=0;i<document.exportCite.elements.length;i++) {
+        if (document.exportCite.elements[i].name == "count") {
+            allNum = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].name == "NUMBER_LIST") {
+            selectNum = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].name == "_rdoc") {
+            rdoc = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].value == "selected") {
+            if (document.exportCite.elements[i].checked) {
+                useSelected = true;
+            }
+        }
+    }
+
+    if (useSelected) {
+        selectNum = selectNum.replace(/ /g,"");
+        if(selectNum.indexOf(",")) {
+            var commaList = selectNum.split(",");
+            for(i=0; i < commaList.length; i++) {
+                count += determineCount(commaList[i]);
+            }
+        }
+        else {
+            count += determineCount(selectNum);
+        }
+    }
+    else { 
+        if (rdoc > 0) {
+            count = 1;
+        }
+        else {
+            count = allNum;
+        }
+    }
+
+    if(count > 50) { return true; }
+  
+    return false;
+}
+
+//-->
+</script>
+
+    <div class="exportInfo">
+        <div class="chkboxCount"></div>
+        <div class="exportHelp">
+            <a target="sdhelp" href="/science?_ob=HelpURL&_file=art_export.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=art_export.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a>
+        </div>
+    </div>
+
+    <div class="expContainer">
+      <ul class="Export_Popup" width="100%">
+        <li class="subHeading"><h3> Direct export </h3></li>
+        <li class="direct_export">
+         
+            <div>
+              <div class="btn_export directExport">
+                <div class="icon_Mendeley" title="Save to Mendeley">&nbsp;</div>
+                <input id="directExport" type="button" value="Save to Mendeley" name="Save to Mendeley" alt="Save to Mendeley" class="mendeleyBT button"/>
+              </div>
+            </div>
+        
+        
+            <div class="btnLine">
+              <div class="btn_export refworks">
+                <div class="icon_Refworks" title="Save to RefWorks">&nbsp;</div>
+                <input id="REFWX" type="button" value="Save to RefWorks" name="Save to RefWorks" alt="Save to RefWorks" class="button refworks"/>
+              </div> 
+            </div>
+            <div class="clear"> </div>
+        
+        </li>
+        <li class="subHeading big"> <h3>Export file</h3></li>
+        <li class="export_radio RIS"><input type="radio" id="RIS" checked name="citation-type" value="RIS"  class="artRadio expRadio RIS">&nbsp;<label for="RIS">RIS&nbsp;(for EndNote, Reference Manager, ProCite)</label>
+        </li>
+        <li class="export_radio"><input type="radio" id="BIBTEX" name="citation-type" value="BIBTEX"  class="artRadio expRadio BIBTEX">&nbsp;<label for="BIBTEX">BibTeX</label>
+        </li>
+        <li class="export_radio"><input type="radio" id="ASCII" name="citation-type" value="ASCII"  class="artRadio expRadio ASCII">&nbsp;<label for="ASCII">Text</label>
+        </li>
+        <li class="export_radio hidden"><input type="radio" id="REFWX" name="citation-type" value="REFWX"  class="artRadio expRadio REFWX">&nbsp;<label for="REFWX">RefWorks Direct Export</label>
+        </li>
+        <li class="subHeading big"><h3>Content</h3></li>
+        <li class="expCitab export_radio"><input type="radio" id="cite" class="cite artRadio expRadio" name="format" value="cite" >&nbsp;<label class="cit" for="cite"> Citation Only </label>
+        </li>
+        <li class="expCitab export_radio citab"><input type="radio" id="cite-abs" class="cite-abs artRadio expRadio" name="format" value="cite-abs" checked>&nbsp;<label class="cab" for="cite-abs"> Citation and Abstract </label>
+        </li>
+        <li class="export_submit">
+            <div class="downBtn export_downBtn">
+               <input type="submit" value="Export" name="export" alt="Export" class="button export_button" id="export_button"/>
+            </div> 
+        </li>
+      </ul>
+
+    </div>
+
+
+        
+        
+            
+         
+
+    </form>
+    </div> 
+</div>    
+</li>
+  
+
+
+
+</ul>
+</div>
+
+<div class="sdSearch" aria-label="Quick search" role="search">
+    <fieldset>
+        <div class="left">
+            <form id="quickSearch" name="qkSrch" method="get" target="_top" action="/science">
+            <input type="hidden" name="_ob" value="QuickSearchURL">
+            <input type="hidden" name="_method" value="submitForm">
+            <input type="hidden" name="_acct" value="C000062395">
+            <input type="hidden" name="searchtype" value="a">
+            <input type="hidden" name="_origin" value="article">
+            <input type="hidden" name="_zone" value="qSearch">
+            <input type="hidden" name="md5" value="d26f7981029877a553c6a51b2a086543">
+            
+            <input  id="quickSearch" type="text" name="qs_all" placeholder="Search ScienceDirect" value="" size="30" maxlength="450" title="Perform a quick search on ScienceDirect"><input type="submit" class="submit" value="" title="Submit quick search"/>
+            
+            <a class="advanced S_C_advanced" href="http://www.sciencedirect.com.proxy.kennesaw.edu/science/search" >Advanced search</a>
+            </form>
+        </div>
+    </fieldset>
+</div>
+<div class="clear"></div>
+<div id="erToolbar"></div>
+
+
+<div style="color : #FF0000; font-weight : bold;border:0px solid red;">
+  
+  
+  
+  
+</div>
+
+
+
+
+
+    </div>
+    <div id="articleToolbarDummy"></div>
+  <div style="clear:both;"></div>
+  
+  <div id="leftPane" class="column" aria-label="table of contents" role="navigation">
+    <div id="leftPaneInner">
+        <div>
+        <div id="leftButton">
+            <ul>
+                <li class="tocbutton">
+                    <a class="outline-toggle" title="Open to view article outline"  alt="Open to view article outline" href="#" aria-expanded="false">
+                        <span class="icon outline_big"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="outlineContainer">
+            <a class="closeBt" title="Close">&nbsp;</a>
+            <div id="outline" class="outline">
+              <script type="text/javascript">
+              document.write("<div class='outlineMsg'>Article outline is loading...</div>");
+              </script>
+              <noscript>
+              <div class="infoMsg">
+              <div style="float: left; width: 20px; "><img border="0" src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/alertIcon.gif" valign="top" alt="Alert message"></div>
+              <div style="padding-left:25px;">JavaScript is disabled on your browser. <br><div style="padding-top:10px;">
+              Please enable JavaScript to use all the features on this page.</div></div>
+              </div>
+              </noscript>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div id="centerPane" class="column">
+    <div class="topBorder"></div>
+    <div id="centerContent" class="centerContent">
+    <div id="centerInner" class="centerInner svBigBox" aria-label="Article" role="main">
+        
+      
+      <noscript>
+      <div class="msgBox" style="margin-top:10px;">
+          <span class="errMsg">
+            <div>JavaScript is disabled on your browser.  Please enable JavaScript to use all the features on this page. This page uses JavaScript to progressively load the article content as a user scrolls. Click the View full text link to bypass dynamically loaded article content. <a rel="nofollow" href="http://www.sciencedirect.com.proxy.kennesaw.edu/science/article/pii/S0041624X16301913?np=y">View full text</a></div>
+         </span>
+      </div><br/>
+      </noscript>
+      <div class="head headTemplate page_fragment_ind">
+
+  
+<div class="publisherLogo">
+  <span class="spElsevierPubIcon"></span>
+</div>
+
+
+  
+    <?xml version="1.0" encoding="UTF-8"?><div xmlns:bk="http://www.elsevier.com/xml/bk/dtd" class="publicationHead"><div class="title"><a title="Go to Ultrasonics on ScienceDirect" href="/science/journal/0041624X" queryStr="?zone=centerPane" class="cLink"><span>Ultrasonics</span></a></div><p class="volIssue"><a class="S_C_volIss" title="Go to table of contents for this volume/issue" href="/science/journal/0041624X/73/supp/C">Volume 73</a>, January 2017, Pages 221–230</p></div>
+  
+    <div class="publicationCover cover2">
+    
+      
+    <a queryStr="?zone=publicationLogo" class="cLink" href="/science/journal/0041624X/73/supp/C">
+      
+    
+    <img alt="Cover image" src="http://ars.els-cdn.com.proxy.kennesaw.edu/content/image/1-s2.0-S0041624X16X0008X-cov150h.gif" class="toprightlogo" />
+    <noscript><img alt="Cover image" src="http://ars.els-cdn.com.proxy.kennesaw.edu/content/image/1-s2.0-S0041624X16X0008X-cov150h.gif" class="toprightlogo" /></noscript>
+    </a>
+    
+  </div>
+
+
+</div>
+
+      <div id="frag_1" class="page_fragment auth_frag" data-first="true" data-fid="1"><div class="module_topic_paths"></div><h1 class="svTitle" id="tm005">A pre-trained convolutional neural network based method for thyroid nodule diagnosis</h1><ul class="authorGroup noCollab svAuthor"><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N5813c840N3c955d80" data-t="a" data-fn="Jinlian" data-ln="Ma" data-pos="1" data-tb="">Jinlian Ma</a><a title="Affiliation: a" href="#af005" class="intra_ref auth_aff" id="baf005"><sup>a</sup></a>, </li><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N5813c840N3c955e34" data-t="a" data-fn="Fa" data-ln="Wu" data-pos="2" data-tb="">Fa Wu</a><a title="Affiliation: a" href="#af005" class="intra_ref auth_aff" id="baf005"><sup>a</sup></a>, </li><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N5813c840N3c955ee8" data-t="a" data-fn="Jiang" data-ln="Zhu" data-pos="3" data-tb="">Jiang Zhu</a><a title="Affiliation: b" href="#af010" class="intra_ref auth_aff" id="baf010"><sup>b</sup></a>, </li><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N5813c840N3c955f9c" data-t="a" data-fn="Dong" data-ln="Xu" data-pos="4" data-tb="">Dong Xu</a><a title="Affiliation: c" href="#af015" class="intra_ref auth_aff" id="baf015"><sup>c</sup></a>, </li><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N5813c840N3c94a900" data-t="a" data-fn="Dexing" data-ln="Kong" data-pos="5" data-tb="">Dexing Kong</a><a title="Affiliation: a" href="#af005" class="intra_ref auth_aff" id="baf005"><sup>a</sup></a><sup>, </sup><a title="Corresponding author contact information" href="#cor1" id="bcor1" class="intra_ref auth_corr"></a><sup>, </sup><a href="mailto:dkong@zju.edu.cn" class="auth_mail" title="E-mail author"></a></li></ul><!--VALIDHTML--><ul class="affiliation authAffil"><li id="af005"><sup>a</sup> <span id="">School of Mathematical Sciences, Zhejiang University, Hangzhou 310027, China</span></li><li id="af010"><sup>b</sup> <span id="">Department of Ultrasound, Sir Run Run Shaw Hospital, Zhejiang University School of Medicine, Hangzhou 310020, China</span></li><li id="af015"><sup>c</sup> <span id="">Department of Ultrasound, Zhejiang Cancer Hospital, Hangzhou 310022, China</span></li></ul><!--VALIDHTML--><!--VALIDHTML--><dl class="articleDates"><dd>Received 10 March 2016, Revised 26 July 2016, Accepted 11 September 2016, Available online 12 September 2016</dd></dl><!--VALIDHTML--><div class="moreInformation"></div><div id="showMoreButtons"></div><div id="ppvPlaceHolder" class="hidden"></div><!--VALIDHTML--><dl class="extLinks"><dd class="doiLink"></dd><dd class="rightsLink"></dd></dl><div class="articleOAlabelForced"></div><div id="refersToAndreferredToBy"><dl id="referredToBy" class="documentThread"><!--Referred To By--></dl></div><!--FRAGMENTEND--><div class="page_fragment_ind auth_frag" data-id="frag_2"></div></div><div id="frag_2" class="page_fragment" data-fid="2"><script>prs.rt("abs_1st_beg");</script><!--VALIDHTML--><hr id="abs_author-highlightsab0051" class="artHeader"><div class="abstract svAbstract &#10;	  abstractHighlights&#10;	  " data-etype="ab"><h2 class="secHeading" id="author-highlightsab0051">Highlights</h2><p id="sp005"><dl class="listitem" id="list_l0005"><dt class="label">&bull;</dt><dd><p id="p0170">A hybrid approach is proposed to diagnose thyroid nodules in ultrasound.</p></dd><dt class="label">&bull;</dt><dd><p id="ce.para_als_rdx_3x">It is a fusion of two pre-trained CNNs with different architectures.</p></dd><dt class="label">&bull;</dt><dd><p id="p0175">All the CNNs are pre-trained with 1.3&#xA0;million natural images from ImageNet database.</p></dd><dt class="label">&bull;</dt><dd><p id="p0180">A multi-view strategy is applied to improve the performance of CNNs.</p></dd><dt class="label">&bull;</dt><dd><p id="p0185">Large clinical thyroid nodule images are studied in our experiments.</p></dd><dt class="label">&bull;</dt><dd><p id="p8180">Novel single-valued integrated indices called TMI are determined.</p></dd><dt class="label">&bull;</dt><dd><p id="p9180">It is easy and transparent of TMI to diagnose thyroid nodules using this technique.</p></dd></dl></p></div><!--VALIDHTML--><hr id="abs_authorab0101" class="artHeader"><div class="abstract svAbstract " data-etype="ab"><h2 class="secHeading" id="authorab0101">Abstract</h2><p id="sp010">In ultrasound images, most thyroid nodules are in heterogeneous appearances with various internal components and also have vague boundaries, so it is difficult for physicians to discriminate malignant thyroid nodules from benign ones. In this study, we propose a hybrid method for thyroid nodule diagnosis, which is a fusion of two pre-trained convolutional neural networks (CNNs) with different convolutional layers and fully-connected layers. Firstly, the two networks pre-trained with ImageNet database are separately trained. Secondly, we fuse feature maps learned by trained convolutional filters, pooling and normalization operations of the two CNNs. Finally, with the fused feature maps, a softmax classifier is used to diagnose thyroid nodules. The proposed method is validated on 15,000 ultrasound images collected from two local hospitals. Experiment results show that the proposed CNN based methods can accurately and effectively diagnose thyroid nodules. In addition, the fusion of the two CNN based models lead to significant performance improvement, with an accuracy of 83.02%&#xA0;&plusmn;&#xA0;0.72%. These demonstrate the potential clinical applications of this method.</p></div><!--VALIDHTML--><h2 id="kwd_1" class="svKeywords">Keywords</h2><ul class="keyword" id="kg005"><li id="k0005" class="svKeywords"><span id="">Ultrasound image</span>; </li><li id="k0010" class="svKeywords"><span id="">Thyroid nodule</span>; </li><li id="k0015" class="svKeywords"><span id="">Convolutional neural network</span>; </li><li id="k0020" class="svKeywords"><span id="">Feature extraction</span>; </li><li id="k0025" class="svKeywords"><span id="">Classification</span>; </li><li id="k0030" class="svKeywords"><span id="">Diagnosis</span></li></ul><!--VALIDHTML--><div id="embeddedPDF" style="display:none"></div><script>prs.rt("abs_end");</script><div id="SD_BA1P" class="sgfNoTitleBar sgfNoGadgetBorder svDoNotLink"></div><!--VALIDHTML--><hr class="artHeader"><h2 class="svArticle" id="s0005">1. Introduction</h2><p class="svArticle section clear" id="p0005">Thyroid nodules are one of most commonly nodular lesions in the adult population. The National Cancer Institute has estimated that 64,300 new thyroid cancer cases will occur and the deaths related to thyroid cancer will be about 1980 in the world <span id="bb0005"><a href="#b0005" id="ancbb0005" class="intra_ref">[1]</a></span>. Moreover, the incidence of thyroid cancer has increased 2.4-fold over the last 30&#xA0;years <span id="bb0010"><a href="#b0010" id="ancbb0010" class="intra_ref">[2]</a></span>. This increase is among the largest increases that has happened in all types of cancers <span id="bb0015"><a href="#b0015" id="ancbb0015" class="intra_ref">[3]</a></span>. Although the incidence of thyroid cancer is high, in more than 50% of the adults, most thyroid nodules are benign and only 7% turn out to be malignant <span id="bb0020"><a href="#b0020" id="ancbb0020" class="intra_ref">[4]</a></span>. However, 15&ndash;30% of thyroid nodules are diagnosed as indeterminate or suspicious for malignancy <span id="bb0025"><a href="#b0025" id="ancbb0025" class="intra_ref">[5]</a></span>. The non-surgical diagnosis of thyroid nodules is fine needle aspiration (FNA) biopsy, which is a critical diagnostic test for determining the proper management of thyroid nodules <span id="bb0030"><a href="#b0030" id="ancbb0030" class="intra_ref">[6]</a></span>. However, many physicians are confused about the various echo patterns of thyroid nodules. Approximately, 10&ndash;20% of thyroid biopsies by the FNA are nondiagnostic <span id="bb0035"><a href="#b0035" id="ancbb0035" class="intra_ref">[7]</a></span>. A surgical approach is generally recommended in such nodules even if more than 70% of them are benign at histological examination, excisional biopsy is the best for differentiation <span id="bb0040"><a href="#b0040" id="ancbb0040" class="intra_ref">[8]</a></span>. However, both FNA biopsy and excisional biopsy are too labor intensive for large scale screenings. Moreover, unnecessary biopsies will make the patients more anxious and increase the healthcare costs.</p><!--VALIDHTML--><p class="svArticle section clear" id="p0010">Being a real-time and non-invasive diagnosis that provides an image of the characteristics of thyroid nodules, ultrasound technology becomes a widely employed imaging method for the diagnosis and follow-up of thyroid nodules <a href="#b0045" id="bb0045" class="intra_ref">[9]</a>&#xA0;; &#xA0;<a href="#b0050" id="bb0050" class="intra_ref">[10]</a>. However, ultrasound images are easily affected by echo perturbations and speckle noise. Different types of thyroid nodules tend to have various internal echogenicities in the sonogram. Moreover, many benign and malignant nodules are similar in internal characteristics (see <span id="bf0005"><a href="#f0005" id="ancbf0005" class="intra_ref">Fig. 1</a></span>). Therefore, accurate visual interpretation of the differentiation of these thyroid nodules can only be done by experienced physicians. Otherwise, it results in subjective interpretations and inter-observer variabilities <span id="bb0055"><a href="#b0055" id="ancbb0055" class="intra_ref">[11]</a></span>.</p><!--VALIDHTML--><div class="figTblUpiOuter svArticle" id="figure_f0005"><div><dl class="figure" id="f0005" data-t="f"><dt class="autoScroll" data-style="height:248px;width:622px;"><a class="figureLink" href="#gr1" title="Typical instances of thyroid nodules."><img class="imgLazyJSB figure large smallImg" border="0" alt="Typical instances of thyroid nodules." src="/sd/grey_pxl.gif" data-thumbEID="1-s2.0-S0041624X16301913-gr1.sml" data-fullEID="1-s2.0-S0041624X16301913-gr1.jpg" data-imgEIDs="1-s2.0-S0041624X16301913-gr1.jpg" data-thumbheight="87" data-thumbwidth="219" data-fullheight="248" data-fullwidth="622"><noscript class="figure large" border="0" alt="Full-size image" data-thumbEID="1-s2.0-S0041624X16301913-gr1.sml" data-fullEID="1-s2.0-S0041624X16301913-gr1.jpg"><img class="figure large" border="0" alt="Typical instances of thyroid nodules." src="http://origin-ars.els-cdn.com.proxy.kennesaw.edu/content/image/1-s2.0-S0041624X16301913-gr1.jpg" data-thumbEID="1-s2.0-S0041624X16301913-gr1.sml" data-imgEIDs="1-s2.0-S0041624X16301913-gr1.jpg" data-fullEID="1-s2.0-S0041624X16301913-gr1.jpg"></noscript></a></dt><dd id="labelCaptionf0005"><div class="caption">Fig. 1.&#xA0;<p id="sp015">Typical instances of thyroid nodules.</p><!--caption--></div></dd><dd class="menuButtonLinks"><div class="btnHolder"><a class="menuTitle" href="#">Figure options</a><div class="down_Btn"></div></div><ul class="menuButton"><li><a class="S_C_full_size" data-src="/science?_ob=MiamiCaptionURL&amp;_method=retrieve&amp;_eid=1-s2.0-S0041624X16301913&amp;_image=1-s2.0-S0041624X16301913-gr1.jpg&amp;_cid=271547&amp;_explode=defaultEXP_LIST&amp;_idxType=defaultREF_WORK_INDEX_TYPE&amp;_alpha=defaultALPHA&amp;_ba=&amp;_rdoc=1&amp;_fmt=FULL&amp;_issn=0041624X&amp;_pii=S0041624X16301913&amp;md5=4b8d4030ef00071379e13283a8018d2a" data-label="labelCaptionf0005" data-ref="" data-format="S0041624X16301913" href="#gr1" title="View full-size image - Opens in new window">Download full-size image</a></li><li><a class="ppt S_C_ppt" title="Download as PowerPoint slide" href="http://services.elsevier.com/SDWebExport/export/figure/S0041624X16301913/1-s2.0-S0041624X16301913-gr1.jpg/ppt">Download as PowerPoint slide</a></li></ul></dd></dl></div></div><!--VALIDHTML--><p class="svArticle section clear" id="p0015">To eliminate the operator dependency and improve the diagnostic accuracy, computer aided diagnosis (CADx) based methods have been developed to detect and classify thyroid nodules recently <a href="#b0055" id="bb0055" class="intra_ref">[11]</a>&#xA0;; &#xA0;<a href="#b0060" id="bb0060" class="intra_ref">[12]</a>. The conventional designs of CADx are often composed of three main steps: pre-processing <a href="#b0065" id="bb0065" class="intra_ref">[13]</a>; <a href="#b0070" id="bb0070" class="intra_ref">[14]</a>&#xA0;; &#xA0;<a href="#b0075" id="bb0075" class="intra_ref">[15]</a>, feature extraction and selection <a href="#b0065" id="bb0065" class="intra_ref">[13]</a>; <a href="#b0080" id="bb0080" class="intra_ref">[16]</a>; <a href="#b0085" id="bb0085" class="intra_ref">[17]</a>&#xA0;; &#xA0;<a href="#b0090" id="bb0090" class="intra_ref">[18]</a>, and classification. These three steps need to be well-addressed separately and then integrated together for the overall CADx performance tuning. In general, the pre-processing includes denoising, contrast enhancement, edge enhancement, segmentation and so on, these pre-processing steps are not only tedious, but also have a great effect on the following processing. The diagnostic image features can be categorized into morphological and textural features. The classifiers can be support vector machine (SVM), k-nearest neighbors, AdaBoost, gaussian mixture model, probabilistic neural network, decision tree and so on <a href="#b0055" id="bb0055" class="intra_ref">[11]</a>; <a href="#b0095" id="bb0095" class="intra_ref">[19]</a>; <a href="#b0100" id="bb0100" class="intra_ref">[20]</a>&#xA0;; &#xA0;<a href="#b0105" id="bb0105" class="intra_ref">[21]</a>. Particularly, SVM based methods with textural features are commonly used for classification of thyroid nodules <a href="#b0065" id="bb0065" class="intra_ref">[13]</a>; <a href="#b0110" id="bb0110" class="intra_ref">[22]</a>&#xA0;; &#xA0;<a href="#b0075" id="bb0075" class="intra_ref">[15]</a>. For instance, Ding et al. <span id="bb0110"><a href="#b0110" id="ancbb0110" class="intra_ref">[22]</a></span> extracted statistical and textural features from thyroid elastograms, and then trained SVM to detect malignancy of thyroid nodules with a maximum classification accuracy of 95.2%. However, the classification accuracy is effected by a hard threshold. Singh and Jindal <span id="bb0075"><a href="#b0075" id="ancbb0075" class="intra_ref">[15]</a></span> first extracted 13 gray level co-occurrence matrix (GLCM) features, and then utilized SVM to classify thyroid nodules with a maximum classification accuracy of 84.62%. Acharya et al. <span id="bb0085"><a href="#b0085" id="ancbb0085" class="intra_ref">[17]</a></span> extracted fractal dimension, local binary pattern, laws texture energy features, and then also used SVM to classify thyroid nodules. Although these studies have gained encouraging results, they are mostly based on handcrafted features extracted from images with a series of pre-processing. The extraction of effective features is a challenge task that requires assistance from the latter steps of feature selection and feature integration by classifier. Moreover, it is also very difficult to select the most significant features and integrate different kinds of features.</p><!--VALIDHTML--><div class="page_fragment_ind" data-id="frag_3"></div><script>prs.rt("abs_1st_end");</script></div>
+
+               
+
+       
+   
+        
+    </div>
+    <div id="footer-area-dummy"></div>
+	
+        <div class="ccs-component">
+            <div class="Footer" role="contentinfo"><div class="els-footer"><div class="els-footer-body"><a class="els-footer-elsevier" href="http://www.elsevier.com/" rel="nofollow" target="_blank"><span class="ccs-icon svg-wordmark-elsevier" aria-label="Elsevier"><span class="svg-text">Elsevier</span></span></a><div class="els-footer-content"><div class="els-footer-links"><a class="link-inherit" href="http://www.elsevier.com/solutions/sciencedirect" rel="nofollow" target="_blank">About ScienceDirect</a><wbr/><a class="link-inherit" href="/science/activateaccess" rel="nofollow" target="_blank">Remote access</a><wbr/><a class="link-inherit" href="/science?_ob=ShoppingCartURL&amp;_method=display&amp;_zone=TopNavBar&amp;_origin=article&amp;md5=98a3e89aa38c5044516e5e4ca8b64e74" rel="nofollow" target="_blank">Shopping cart</a><wbr/><a class="link-inherit" href="https://service.elsevier.com/app/contact/supporthub/sciencedirect/" rel="nofollow" target="_blank">Contact and support</a><wbr/><a class="link-inherit" href="https://www.elsevier.com/legal/elsevier-website-terms-and-conditions" rel="nofollow" target="_blank">Terms and conditions</a><wbr/><a class="link-inherit" href="http://www.elsevier.com/legal/privacy-policy" rel="nofollow" target="_blank">Privacy policy</a></div><div class="els-footer-cookie">Cookies are used by this site. For more information, visit the <a class="link-blue" href="https://www.elsevier.com/solutions/sciencedirect/support/cookies" rel="nofollow" target="_blank">cookies page</a>.</div><div class="els-footer-copyright">Copyright © <span class="copyright-year">2017</span> Elsevier B.V. or its licensors or contributors. ScienceDirect ® is a registered trademark of Elsevier B.V.</div></div></div><div class="els-footer-relx-group"><a class="els-footer-relx" href="http://www.relx.com/" rel="nofollow" target="_blank"><span class="ccs-icon svg-wordmark-relx-group" aria-label="RELX Group"><span class="svg-text">RELX Group</span></span></a></div></div></div>
+        </div>
+    
+    </div>
+ </div>
+ <div id="rightPane" class="column" aria-label="Related content" role="complementary">
+  <div id="rightOuter" class="rightOuter">
+    <div id="rightInner" class="rightInner">
+       <div class="innerPadding">
+
+    <div id="SD_BIB" class="hidden entry separator appBox sgfNoTitleBar sgfNoGadgetBorder"></div>
+ 
+
+    
+    
+        <div id="recommend_related_articles" class="entry separator related closed">
+            
+                <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Recommended articles</a></h2>
+             
+             <ol id="relArtList"><li class="note"><p>No articles found.</p></li></ol>
+        </div>
+    
+    
+    
+        <div id="cited_by_articles" class="entry separator related closed">
+            <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Citing articles (<span id="hitcount">0</span>)</a></h2>
+            <ol id="citedByList"><li class="note"><p>This article has not been cited.</p></li></ol> 
+        </div>
+    
+    
+    
+        <div id="SD_CRA" class="hidden entry separator appBox sgfNoTitleBar sgfNoGadgetBorder"></div>  
+    
+    
+        
+            <div id="related_book_content" class="entry separator related closed">
+                <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Related book content</a></h2>
+                <ol id="relBkList"><li class="note" style="margin-left:15px;"><p>No articles found.</p></li></ol>
+            </div>
+        
+     
+     
+
+
+
+    
+        <div class="appContainerDummy"></div>
+        <div class="appContainer js_application_content">
+            <ul class="hidden" id="dataRepHolder"></ul>
+            
+                <div id="SD_AT1P" class="boxLink sgfNoTitleBar sgfNoGadgetBorder"></div>
+            
+
+            
+                <div id="SD_FTA1" class="boxLink sgfHorToolbar sgfShowMyApps sgfShowMoreLessApps"></div>
+            
+        </div>
+    
+
+
+</div>
+
+<div class="js_workspace_content popup" aria-live="polite" role="region" aria-label="Overlay" aria-describedby="skuip-3">
+    <a aria-label="close overlay" title="close overlay" alt="close overlay" href="#" id="buttonClose" role="button" class="closeBt">&nbsp;</a>
+    <div class="scrollArea"><div id="workSpaceView"></div></div>
+</div>
+
+    </div><!--rightInner-->
+  </div><!--rightOuter-->
+ </div><!--rightPane-->
+</div><!--page-area-->
+
+
+
+<div style="clear:both;"></div>
+
+<form name="citationInfo" id ="citationInfo" method="POST" action="">
+    <input type="hidden" name="art_citation" value=""/>
+</form>
+
+
+<script src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/js/sdX_1704R5.js"></script>
+
+
+
+
+<script src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/js/sd_1704R5.js"></script>
+
+
+
+<script src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/js/pa_1704R5.js"></script>
+
+
+<script>
+var sciverse="empty";
+var SDM=new Object;
+SDM.tm=new Object;
+SDM.tm.ahm='h'
+
+
+
+SDM.ep=new Object;
+SDM.ep.downloadCsvURL = "http://services.elsevier.com/SDWebExport/export/table/csv";
+SDM.ep.downloadActionURL = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/downloadActions/keyEvent/S0041624X16301913/0041624X";
+SDM.ep.gigyaLib="//cdn.gigya.com/JS/socialize.js?apiKey=3__Bt7bHrGM8mjKPwBuOVjWyMi678aF6-PewcnoHJJ6UR1fS5t9NG9RBbKHjE0oA6J";
+SDM.ep.imgUrlPrefix = "http://ars.els-cdn.com.proxy.kennesaw.edu/content/image/";
+SDM.ep.thumbimgUrlPrefix = "http://ars.els-cdn.com.proxy.kennesaw.edu/content/thumbimage/";
+SDM.ep.mendeleyJS = "https://www.mendeley.com/minified/bookmarklet.js";
+SDM.ep.enableUsabillaMsg = "Y";
+SDM.ep.ref2ref2by = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/relLink/ajaxReq?_eid=1-s2.0-S0041624X16301913";
+SDM.ep.staticImgUrlPrefix = "http://cdn.els-cdn.com.proxy.kennesaw.edu/sd";
+SDM.ep.urlPrefix = "http://www.sciencedirect.com.proxy.kennesaw.edu/science";
+SDM.ep.urlQualifier = "science";
+SDM.ep.urlScheme = "http://www.sciencedirect.com.proxy.kennesaw.edu";
+SDM.ep.userActionURL = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/UserActions";
+ SDM.helpUrlDomain="http://help.sciencedirect.com.proxy.kennesaw.edu/flare"; 
+
+
+
+
+SDM.pm=new Object;
+SDM.pm.cid = '271547';
+SDM.pm.contentFamily = "serial";
+SDM.pm.contentType = "JL";
+SDM.pm.coverDate = '31-Jan-2017';
+
+SDM.pm.doi = '10.1016/j.ultras.2016.09.011';
+
+SDM.doi = '10.1016/j.ultras.2016.09.011';
+SDM.pm.eid = '1-s2.0-S0041624X16301913';
+SDM.pm.entitled = true;
+ SDM.pm.hubEid = '1-s2.0-S0041624X16X0008X'; 
+SDM.pm.indexType = '';
+SDM.pm.issnisbn = "0041624X";
+
+SDM.pm.itemWeight = 'FULL-TEXT';
+SDM.pm.mod_cid="";
+SDM.pm.mod_srcTitle="";
+SDM.pm.mod_ISBN = "";
+SDM.pm.pdfEid = '1-s2.0-S0041624X16301913-main.pdf';
+SDM.pm.pdfSize = '2569157';
+SDM.pm.pii = 'S0041624X16301913';
+SDM.pm.prodColor="sci_dir";if(SDM.pm.prodColor=="sci_dir")SDM.pm.prodColor="";
+ SDM.pm.rev = '20161103T13362370981'; 
+ SDM.pm.hrev = 'vH.13'; 
+ SDM.pm.pptURL = 'http://services.elsevier.com/SDWebExport/export/figure/'; 
+
+
+
+
+
+
+
+SDM.pf = new Object;
+SDM.pf.pdfAvail = true;
+SDM.pf.reqAllFrags = true;
+ SDM.pf.maxElemsAllFrags = 12000
+SDM.pf.relatedBkAvail=true;
+SDM.pf.mlktAvail = true;
+SDM.pf.hpccAvail = true;
+SDM.pf.blkSocialLogins=true;
+
+
+SDM.browserUserMsg=true;
+
+
+SDM.pf.citedByScAvail = true;
+SDM.pf.aetEnabled = false;
+ SDM.pf.suggestedArtPDFMaxWait="2000";
+ SDM.pf.pdfMenuAvail=true; 
+ SDM.pf.npKey="36b6a22a4cb035db1e47e9952a22b30593fa62d3e7ef2f846e58f2510bfe7dc5";
+
+
+SDM.pf.ads = new Object;
+SDM.pf.ads.leftUrl="/science/advertisement/left/num/768650/mainCat/general/cat/general/acct/3b30b7f9a7f36fbc58ec3cbdc234269a/isn/0041624X/doi/10.1016_j.ultras.2016.09.011/page/article/artOAstatus/N";
+
+
+
+
+SDM.pf.dc = new Object;
+SDM.pf.dc.retry = 10;
+SDM.pf.dc.retryDelay = 300;
+SDM.pf.dc.retryFactor = 1.0;
+SDM.pf.dc.respObj = '';
+
+
+SDM.pf.er = new Object();
+
+
+
+
+
+
+SDM.pf.frag = new Object();
+SDM.pf.frag.fat = '41bb6557c2e1a7ed6337283375f48c23c53a758d7f0afe41ffa16ade252cfd355cb0dc2cfbb928e4e748c2fed280aabd46b62f21edb4fadc7a3f80b11a207d5d4c18a4daf9753973265733d6970bb8ed1f7ecdf8efcf72de5395964f1c73182ba564eced1b17c8f0a7b2cc108a28a4be8a980aeb5aed1db1effc94b99e5be170bf60a192e6416950a3a2f5220a7ba553efd0d82cf053a008';
+SDM.pf.frag.mapRetry = 20;
+SDM.pf.frag.mapRetryDelay = 2000;
+SDM.pf.frag.mapRetryFactor = 1.1;
+SDM.pf.frag.retry = 5;
+SDM.pf.frag.retryDelay = 2000;
+SDM.pf.frag.foldFactor = 1.5;
+SDM.pf.frag.hashWait = 5000;
+
+
+
+SDM.pf.crossMark = new Object();
+SDM.pf.crossMark.url = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/crossMark";
+
+SDM.pf.crossMark.lib = "http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/js/crossmark_1704R5.js.min";
+
+
+
+
+
+SDM.pf.gadget = new Object();
+SDM.pf.gadget.displayGadgets=true;
+SDM.pf.gadget.sciverseUrlPfx="http://www.sciencedirect.com.proxy.kennesaw.edu";
+SDM.pf.gadget.sciverseJsonObject='';
+SDM.pf.gadget.sciverseGadgetDetailsID = "";
+SDM.pf.gadget.svShindigLib="http://sciverse-shindig.elsevier.com/gadgets/js/shindig-container:pubsub-2.js?c=1";
+SDM.pf.gadget.svSciverseLib="http://www.sciencedirect.com.proxy.kennesaw.edu/gadgetservices/gadgets/v9/js/SciverseShindigService,GadgetToolBar,jquery-outside,jquery.ba-bbq.min,SciverseShindigContainer,ScienceDirectShindigServices.js";
+
+
+
+SDM.pf.mrwmod = new Object();
+SDM.pf.mrwmod.breadCrumbPathURL = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/module/breadCrumbPaths/isbn//pii/S0041624X16301913";
+
+SDM.pf.mrwmod.ldrAvail = true;
+
+
+ 
+
+
+SDM.pf.oa = new Object();
+
+
+
+
+
+
+
+
+SDM.pf.ref = new Object();
+SDM.pf.ref.bs = 20;
+SDM.pf.ref.citedByURL = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/referenceResolution/ajaxRefResol?_updateCitedBy=";
+SDM.pf.ref.fd = 300;
+
+SDM.pf.ref.resolveURL = "http://www.sciencedirect.com.proxy.kennesaw.edu/science/referenceResolution/ajaxRefResol?_pii=S0041624X16301913&_refCnt=50&_docType=article";
+
+
+
+
+
+SDM.pf.toc=new Object;
+SDM.pf.toc.retry = 20;
+SDM.pf.toc.retryDelay = 1000;
+SDM.pf.toc.retryFactor = 1.09;
+SDM.pf.toc.outlineGraphics = false;
+SDM.pf.toc.outlineTab = "";
+
+SDM.pf.toc.urlTOCLink="http://www.sciencedirect.com.proxy.kennesaw.edu/science/article/pii/S0041624X16301913";
+SDM.pf.toc.urlTOCLinkQueryStr="?_rdoc=1&_fmt=full&_origin=article&md5=4864f78cdf62fbe66ef76f5539973747";
+
+SDM.pf.ddm = new Object();
+SDM.pf.ddm.endpoint = "http://services.elsevier.com/SDWebExport/export/pdfdownload/pdf";
+
+
+
+
+
+
+SDM.si = new Object();
+SDM.si.webUserId = "4144321";
+SDM.si.sds = "8a9f8ed548abaeb0bb06511d740b4e1239b653df9ac89fcaed38580f5fce762dac7901b3e57d4b23845aaeaf4d7007a0";
+SDM.si.euidCookieObject='05d4cff290dfbfb3d6804def5d420dfa0f7176b56406fd8863ba24d5fa7647655b761635ada3032d';
+
+SDM.pageTransKey = "05/06/2017 16:02:39 EDT#2845_004#44644#130.218.102.63";
+SDM.pageType = "article_full";
+SDM.tid = "f527e668-3296-11e7-8869-00000aacb35d";
+SDM.ud = "4144321|<SAInfo><SAId>1041</SAId><SAName>Galileo Consortium</SAName><SANum>S000001041</SANum></SAInfo>|C000062395|91194|IPRANGE";
+SDM.ieVersion="8";
+
+SDM.dac = new Object;
+SDM.svapi = SVApi;
+
+</script>
+
+
+<script src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/js/importer-api_1704R5.js.min"></script>
+
+
+<script>
+
+initializeArticlePage();
+</script>
+
+
+
+
+<script type="text/javascript">/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/14bb862cc5c4.js");
+/*]]>{/literal}*/
+if(typeof SDM != "undefined") {
+  if(SDM.ud) { usabilla_live("data", {"custom": {"ud":SDM.ud} }); }
+  if(SDM.pf&&SDM.pf.oa) {
+    if(SDM.pf.oa.item) { usabilla_live("data", {"custom": {"open_access":SDM.pf.oa.item} });}
+    if(SDM.pf.oa.archive) { usabilla_live("data", {"custom": {"open_archive":SDM.pf.oa.archive} });}
+  }
+  if(SDM.pm&&SDM.pm.mod_cid) {
+    usabilla_live("data", {"custom": {"refmod_article":true} });
+  }
+  else {usabilla_live("data", {"custom": {"refmod_article":false} });}
+}
+</script>
+<script>
+function tmp_removeCite() {
+    if ($('#cited_by_articles').length) {
+    if (SDM.pm != undefined) {
+        if (SDM.pm.issnisbn == '23528478') {
+            $('#cited_by_articles').hide();
+            } 
+        } 
+    }
+}
+
+function tmp_removeCiteCounter(c) {
+    if ($('#cited_by_articles').length) {
+        tmp_removeCite();
+    }
+    else if (c>30) {
+        return;
+    }
+    else {
+        c++;
+        setTimeout(function() {tmp_removeCiteCounter(c);}, 200);
+    }
+}
+tmp_removeCiteCounter(1);  
+</script>
+
+
+<div id="sdpa"></div>
+<script>SDPA.init();</script>
+<div id="appBackground"></div>
+<div id="appDialog" class="files">
+    <div id="header">
+     <div class="pdfSearchHeading"> Download PDFs
+    <span class="close" id="closeBtn" href = "#" title = "Close Search Results " alt="Close Search Results"><img src="http://cdn.els-cdn.com.proxy.kennesaw.edu/sd/sci_dir/closeButton.png"></span>
+    </div></div>
+    <div id="contentBlk" class="view">
+        <div class="help_button" id="ddmMainHelp"><a class="ddmHelp" target="sdhelp" href="/science?_ob=HelpURL&_file=DM_main.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=DM_main.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a></div>
+        <div class="help_button" id="ddmNewformatHelp"><a class="ddmHelp" target="sdhelp" href="/science?_ob=HelpURL&_file=DM_newformat.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=DM_newformat.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a></div>
+        <div id="filesTemplate"></div>
+        <div id="namingTemplate"></div> 
+    </div>
+    <div class="footer"></div>
+</div>
+
+
+
+
+
+<script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-b7cfe8df39a4e5eec5536bba80e13f4b6fa0dd7c.js"></script>
+<script>
+
+
+var pageData=new Object;
+
+var page=new Object;
+page["businessUnit"]="ELS:RP:ST";
+page["isProduction"]="true";
+page["language"]="en";
+page["name"]="product:journal:article";
+page["productName"]="SD";
+page["environment"]="prod";
+page["noTracking"]="false";
+page["loadTime"]="";
+page["loadTimestamp"]=Date.now().toString();
+page["type"]="article";
+pageData["page"]=page;
+
+var visitor=new Object;
+visitor["accessType"]="ae:ANON-IP";
+visitor["accountId"]="ae:62395";
+visitor["accountName"]="ae:Kennesaw State University-Galileo Consortium";
+
+  visitor["consortiumId"]="ae:S000001041";
+
+visitor["industry"]="";
+visitor["ipAddress"]="130.218.102.63";
+visitor["loginStatus"]="";
+visitor["sisId"]="";
+
+visitor["userId"]="ae:4144321";
+pageData["visitor"]=visitor;
+
+
+var pageContent=new Object;
+pageContent["entitlementType"]="subscribed";
+pageContent["format"]="MIME-XHTML";
+pageContent["id"]="sd:article:pii:S0041624X16301913";
+pageContent["type"]="SD:ARTICLE:SCOPE-FULL";
+pageContent["detail"]="SD:ARTICLE:subtype:fla";
+pageData["content"]=[pageContent];
+
+
+function getPageLoadTime()
+{ 
+    returnValue = '';
+    if (typeof(performance) !== 'undefined' && typeof(performance.timing) == 'object')
+    {
+        timing = performance.timing;
+        startTime = timing.redirectStart || timing.fetchStart || timing.requestStart;
+        endTime = timing.domContentLoadedEventEnd || timing.domInteractive || timing.domComplete || timing.loadEventComplete;
+        if (startTime && endTime && startTime < endTime) returnValue = endTime - startTime;
+    }
+    return returnValue.toString();
+}
+
+$(document).ready(function()
+{
+    if( typeof(pageData) != 'undefined' && typeof(pageData["page"]) != 'undefined' && typeof(pageData["page"]["loadTime"]) != 'undefined' )
+    {
+        pageData["page"]["loadTime"]=getPageLoadTime();
+    }
+}
+);
+
+
+try { pageDataTracker.trackPageLoad(); }
+catch(e) { console.warn("There was an error loading or running Adobe DTM:\r\n ", e); }
+</script>
+
+
+
+<script src="//sdfestaticassets-us-east-1.sciencedirectassets.com/prod/7032e05c5c0b6ab4860e163c162d4d4c7c8842c5/client.js"></script>
+
+
+</body></html>
+
